@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|assets|\.txt)
+RewriteRule ^(.*)$ ./index.php?$1 [L]
+
+<IfModule mod_headers.c>
+Header add Cache-Control:  "no-store, no-cache, must-revalidate"
+</IfModule>
